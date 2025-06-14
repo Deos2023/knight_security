@@ -1,3 +1,4 @@
+// app/about/page.js
 "use client"
 import Head from 'next/head';
 import Image from 'next/image';
@@ -9,11 +10,9 @@ export default function About() {
     <div className="min-h-screen bg-[#FDF8F3] text-[#3D2B1F]">
       <Head>
         <title>About Us | Knight Security - Trusted Security Services in Kolkata</title>
-        <meta name="description" content="Learn about Knight Security's 21 years of experience providing professional security services in Kolkata. Our mission, vision, and commitment to safety." />
+        <meta name="description" content="Learn about Knight Security&apos;s 21 years of experience providing professional security services in Kolkata. Our mission, vision, and commitment to safety." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      
 
       {/* About Hero Section */}
       <section className="relative h-64 md:h-80 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/5.webp)' }}>
@@ -52,7 +51,7 @@ export default function About() {
                 Founded in 2003, Knight Security has been at the forefront of providing professional security solutions in Kolkata for over two decades. What began as a small security agency has grown into one of the most trusted names in the industry.
               </p>
               <p className="mb-4 text-[#5E3B1F]">
-                Our journey has been marked by a steadfast commitment to excellence, integrity, and customer satisfaction. We've built our reputation one client at a time, ensuring that every assignment receives our undivided attention.
+                Our journey has been marked by a steadfast commitment to excellence, integrity, and customer satisfaction. We&apos;ve built our reputation one client at a time, ensuring that every assignment receives our undivided attention.
               </p>
             </motion.div>
             <motion.div
@@ -77,7 +76,7 @@ export default function About() {
       <section className="py-16 bg-[#FDF8F3]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#3D2B1F]">Our Mission & Vision</h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#3D2B1F]">Our Mission &amp; Vision</h2>
             <div className="w-20 h-1 bg-yellow-500 mx-auto"></div>
           </div>
           
@@ -95,7 +94,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-[#3D2B1F]">Our Mission</h3>
               </div>
               <p className="text-[#5E3B1F]">
-                To provide exceptional security services through highly trained personnel, cutting-edge technology, and unwavering commitment to our clients' safety. We aim to create secure environments where businesses can thrive and families can live without fear.
+                To provide exceptional security services through highly trained personnel, cutting-edge technology, and unwavering commitment to our clients&apos; safety. We aim to create secure environments where businesses can thrive and families can live without fear.
               </p>
             </motion.div>
             
@@ -112,7 +111,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-[#3D2B1F]">Our Vision</h3>
               </div>
               <p className="text-[#5E3B1F]">
-                To be Kolkata's most trusted security partner, recognized for our reliability, professionalism, and innovative security solutions. We envision a safer Kolkata where our services contribute to the overall well-being and prosperity of the community.
+                To be Kolkata&apos;s most trusted security partner, recognized for our reliability, professionalism, and innovative security solutions. We envision a safer Kolkata where our services contribute to the overall well-being and prosperity of the community.
               </p>
             </motion.div>
           </div>
@@ -136,7 +135,7 @@ export default function About() {
               },
               {
                 title: "24/7 Availability",
-                description: "Security concerns don't keep business hours, and neither do we. Our team is available round-the-clock for your protection.",
+                description: "Security concerns don&apos;t keep business hours, and neither do we. Our team is available round-the-clock for your protection.",
                 icon: "/icons/clock.png"
               },
               {
@@ -171,7 +170,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">Ready to Secure Your Property?</h2>
           <p className="mb-8 max-w-2xl mx-auto">Contact us today to discuss your security needs and get a free consultation from our experts.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+919123322412" className="bg-yellow-500 text-white px-6 py-3 rounded hover:bg-yellow-600">Call Now</a>
+            <Link href="tel:+919123322412" className="bg-yellow-500 text-white px-6 py-3 rounded hover:bg-yellow-600">Call Now</Link>
             <Link href="/contact" className="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-black transition">Contact Us</Link>
           </div>
         </div>
