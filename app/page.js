@@ -17,7 +17,7 @@ export default function Home() {
       {/* Navigation - Add your navigation component here */}
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/hero2.webp)' }}>
+      <section className="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/hero.jpeg)' }}>
         <div className="absolute inset-0 bg-black/40 bg-opacity-60 z-0"></div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <motion.h1
@@ -102,7 +102,7 @@ export default function Home() {
               >
                 <div className="flex items-center mb-4">
                   <div className="bg-yellow-500 p-2 rounded-full mr-4">
-                    <Image src={item.icon} alt={item.title} width={24} height={24} />
+                    {/* <Image src={item.icon} alt={item.title} width={24} height={24} /> */}
                   </div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                 </div>

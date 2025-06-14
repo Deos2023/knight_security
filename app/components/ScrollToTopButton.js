@@ -32,7 +32,7 @@ const ScrollToTopButton = () => {
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = '919123322412'; // without "+" and special characters
+    const phoneNumber = '919123322412';
     const message = 'Hi, I would like to inquire about your services.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -44,18 +44,20 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-4 flex flex-col items-end space-y-3 z-50">
-      {/* Call Button */}
-      <button
-        onClick={handleCall}
-        className="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-200"
-        aria-label="Call"
-        type="button"
-      >
-        <CallIcon />
-      </button>
+    <div className="fixed bottom-4 right-4 flex flex-col items-end gap-3 z-50">
+      {/* Scroll to Top */}
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="w-12 h-12 flex items-center justify-center bg-neutral-500 text-white rounded-full shadow-lg transition-opacity duration-300 text-xl p-2"
+          aria-label="Scroll to top"
+          type="button"
+        >
+          ↑
+        </button>
+      )}
 
-      {/* WhatsApp Button */}
+      {/* WhatsApp */}
       <button
         onClick={handleWhatsApp}
         className="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors duration-200"
@@ -65,18 +67,15 @@ const ScrollToTopButton = () => {
         <WhatsAppIcon />
       </button>
 
-      {/* Scroll to Top Button */}
+      {/* Call */}
       <button
-  onClick={scrollToTop}
-  className={`fixed bottom-6 right-6 w-12 h-12 flex items-center justify-center bg-neutral-500 text-white rounded-full shadow-lg transition-opacity duration-300 text-xl ${
-    isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-  }`}
-  aria-label="Scroll to top"
-  type="button"
->
-  ↑
-</button>
-
+        onClick={handleCall}
+        className="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-200"
+        aria-label="Call"
+        type="button"
+      >
+        <CallIcon />
+      </button>
     </div>
   );
 };

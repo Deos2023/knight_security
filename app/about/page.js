@@ -61,7 +61,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <Image
-                src="/img/1 (14).jpeg"
+                src="/img/1 (11).jpeg"
                 alt="Knight Security Team"
                 width={600}
                 height={400}
@@ -88,8 +88,8 @@ export default function About() {
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center mb-4">
-                <div className="bg-yellow-100 p-3 rounded-full mr-4">
-                  <Image src="/icons/target.png" alt="Mission" width={24} height={24} />
+                <div className="bg-yellow-400 p-3 rounded-full mr-4">
+                  {/* <Image src="/icons/target.png" alt="Mission" width={24} height={24} /> */}
                 </div>
                 <h3 className="text-xl font-semibold text-[#3D2B1F]">Our Mission</h3>
               </div>
@@ -105,8 +105,8 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="flex items-center mb-4">
-                <div className="bg-yellow-100 p-3 rounded-full mr-4">
-                  <Image src="/icons/eye.png" alt="Vision" width={24} height={24} />
+                <div className="bg-yellow-400 p-3 rounded-full mr-4">
+                  {/* <Image src="/icons/eye.png" alt="Vision" width={24} height={24} /> */}
                 </div>
                 <h3 className="text-xl font-semibold text-[#3D2B1F]">Our Vision</h3>
               </div>
@@ -152,8 +152,8 @@ export default function About() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="bg-yellow-100 p-3 rounded-full mr-4">
-                    <Image src={item.icon} alt={item.title} width={24} height={24} />
+                  <div className="bg-yellow-400 p-3 rounded-full mr-4">
+                    {/* <Image src={item.icon} alt={item.title} width={24} height={24} /> */}
                   </div>
                   <h3 className="text-xl font-semibold text-[#3D2B1F]">{item.title}</h3>
                 </div>
