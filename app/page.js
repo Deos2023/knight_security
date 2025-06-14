@@ -14,8 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Navigation */}
-      
+      {/* Navigation - Add your navigation component here */}
 
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/hero2.webp)' }}>
@@ -42,40 +41,39 @@ export default function Home() {
           </motion.p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/services" className="bg-yellow-500 text-white px-6 py-3 rounded hover:bg-yellow-600">Explore Services</Link>
-            <Link href="https://maps.app.goo.gl/NUniuM8gDbMSjT3q9" target="_blank" className="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-black transition">View on Map</Link>
+            <Link href="https://maps.app.goo.gl/NUniuM8gDbMSjT3q9" target="_blank" rel="noopener noreferrer" className="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-black transition">View on Map</Link>
           </div>
         </div>
       </section>
 
       {/* Feature Icons Section */}
-<section className="py-16 bg-white">
-  <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    {features.map((feature, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="bg-[#FDF8F3] rounded-lg shadow hover:shadow-md overflow-hidden"
-        style={{ height: '350px' }}
-      >
-        <div className="relative h-40 w-full">
-          <Image
-            src={feature.icon}
-            alt={feature.title}
-            fill
-            className="object-cover"
-          />
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-[#FDF8F3] rounded-lg shadow hover:shadow-md overflow-hidden"
+              style={{ height: '350px' }}
+            >
+              <div className="relative h-40 w-full">
+                <Image
+                  src={feature.icon}
+                  alt={feature.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 flex flex-col justify-between h-[calc(100%-10rem)]">
+                <h3 className="text-xl font-semibold mb-2 text-[#3D2B1F]">{feature.title}</h3>
+                <p className="text-sm text-[#5E3B1F]">{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
-        <div className="p-5 flex flex-col justify-between h-[calc(100%-10rem)]">
-          <h3 className="text-xl font-semibold mb-2 text-[#3D2B1F]">{feature.title}</h3>
-          <p className="text-sm text-[#5E3B1F]">{feature.description}</p>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</section>
-
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-[#5E3B1F] text-white">
@@ -144,16 +142,15 @@ export default function Home() {
                   <Image 
                     src={service.image} 
                     alt={service.title} 
-                    layout="fill" 
-                    objectFit="cover" 
-                    className="transition duration-300 hover:scale-105"
+                    fill
+                    className="object-cover transition duration-300 hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 text-[#3D2B1F]">{service.title}</h3>
                   <p className="text-[#5E3B1F] mb-4">{service.description}</p>
                   <Link href={`/services/${service.slug}`} className="text-yellow-600 font-medium hover:underline">
-                    Learn More →
+                    Learn More &rarr;
                   </Link>
                 </div>
               </motion.div>
@@ -242,7 +239,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-[#F0E6DB] italic mb-6">"{testimonial.quote}"</p>
+                <p className="text-[#F0E6DB] italic mb-6">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center">
                   <div className="bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.name.charAt(0)}

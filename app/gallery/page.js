@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 export default function Gallery() {
   // Generate image paths (replace with your actual image paths)
-  const images = Array.from({ length: 18 }, (_, i) => `/img/1 (${i + 1}).jpeg`);
+  const images = Array.from({ length: 17 }, (_, i) => `/img/1 (${i + 1}).jpeg`);
   
   const [selectedImage, setSelectedImage] = useState(null);
 
